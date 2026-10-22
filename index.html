@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моё портфолио</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --muted: #8b949e;
+            --accent: #58a6ff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px 50px;
+            background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
+            border-bottom: 1px solid var(--border);
+        }
+
+        header h1 { font-size: 2.6em; margin-bottom: 12px; }
+        header p { color: var(--muted); font-size: 1.15em; max-width: 600px; margin: 0 auto; }
+
+        .github-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--accent);
+            text-decoration: none;
+            border: 1px solid var(--accent);
+            padding: 10px 24px;
+            border-radius: 30px;
+            transition: 0.25s;
+        }
+        .github-link:hover { background: var(--accent); color: #0d1117; }
+
+        main {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: transform 0.25s, border-color 0.25s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover { transform: translateY(-6px); border-color: var(--accent); }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background: #21262d;
+        }
+
+        .card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+        .card-body h3 { margin-bottom: 10px; font-size: 1.25em; }
+        .card-body p { color: var(--muted); font-size: 0.95em; flex: 1; }
+
+        .tags { margin: 14px 0; }
+        .tag {
+            display: inline-block;
+            font-size: 0.75em;
+            background: #21262d;
+            color: var(--accent);
+            border-radius: 20px;
+            padding: 4px 12px;
+            margin: 0 6px 6px 0;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            background: var(--accent);
+            color: #0d1117;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px;
+            border-radius: 8px;
+            transition: 0.25s;
+        }
+        .btn:hover { filter: brightness(1.15); }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--muted);
+            border-top: 1px solid var(--border);
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+
+    <header>
+        <h1>Мои проекты</h1>
+        <p>Сайты, которые я создавал: от статических страниц до веб-приложений на Python.</p>
+        <a class="github-link" href="https://github.com/kord73333" target="_blank">GitHub профиль</a>
+    </header>
+
+    <main>
+
+        <div class="card">
+            <img src="images/avtodrive.png" alt="AvtoDrive">
+            <div class="card-body">
+                <h3>AvtoDrive</h3>
+                <p>Описание проекта: что делает сайт, какая задача решалась.</p>
+                <div class="tags">
+                    <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+                </div>
+                <a class="btn" href="https://kord73333.github.io/AvtoDrive/" target="_blank">Открыть сайт</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/converter2.png" alt="Converter 2.0">
+            <div class="card-body">
+                <h3>Converter 2.0</h3>
+                <p>Описание проекта: что конвертирует, какие фишки добавил во второй версии.</p>
+                <div class="tags">
+                    <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+                </div>
+                <a class="btn" href="https://kord73333.github.io/Converter2.0/" target="_blank">Открыть сайт</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/converter.png" alt="Converter">
+            <div class="card-body">
+                <h3>Converter</h3>
+                <p>Описание проекта: первая версия конвертера.</p>
+                <div class="tags">
+                    <span class="tag">HTML</span><span class="tag">CSS</span>
+                </div>
+                <a class="btn" href="https://kord73333.github.io/Converter/" target="_blank">Открыть сайт</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/drivemaster.png" alt="DriveMaster">
+            <div class="card-body">
+                <h3>DriveMaster</h3>
+                <p>Многостраничный сайт автоцентра: каталог, сервис, новости, контакты.</p>
+                <div class="tags">
+                    <span class="tag">HTML</span><span class="tag">CSS</span>
+                </div>
+                <a class="btn" href="https://kord73333.github.io/DriveMaster/" target="_blank">Открыть сайт</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/python-data.png" alt="Data app">
+            <div class="card-body">
+                <h3>Data (Python)</h3>
+                <p>Веб-приложение на Python, развёрнутое на PythonAnywhere.</p>
+                <div class="tags">
+                    <span class="tag">Python</span><span class="tag">Flask</span>
+                </div>
+                <a class="btn" href="https://kord.pythonanywhere.com/data/" target="_blank">Открыть сайт</a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Моё портфолио</p>
+    </footer>
+
+</body>
+</html>
